@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Spinner } from 'reactstrap';
 import axios from 'axios';
 import StarCard from './StarCard';
 
@@ -16,7 +17,9 @@ export default function PhotoDisplay() {
 	}, []);
 
 	if (data.length === 0) {
-		return <h1 style={{ color: 'red' }}>Loading...</h1>;
+		return (
+			<Spinner color="warning" style={{ width: '5rem', height: '5rem' }} />
+		);
 	} else {
 		return data.map(data => {
 			return (
