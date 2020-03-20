@@ -7,8 +7,8 @@ export default function PhotoDisplay() {
 		axios
 			.get('https://swapi.co/api/people/')
 			.then(response => {
-				console.log(response);
-				// setImage(response.data);
+				console.log(response.data.results);
+				setImage(response.data.results);
 			})
 			.catch(error => {
 				console.log('data was not returned', error);
