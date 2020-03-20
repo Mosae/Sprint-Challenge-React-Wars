@@ -8,7 +8,6 @@ export default function PhotoDisplay() {
 		axios
 			.get('https://swapi.co/api/people/')
 			.then(response => {
-				console.log(response.data.results);
 				setData(response.data.results);
 			})
 			.catch(error => {
@@ -17,10 +16,9 @@ export default function PhotoDisplay() {
 	}, []);
 
 	if (data.length === 0) {
-		return <div>Loading...</div>;
+		return <h1 style={{ color: 'red' }}>Loading...</h1>;
 	} else {
 		return data.map(data => {
-			console.log(data);
 			return (
 				<StarCard data={data.name} height={data.height} mass={data.mass} />
 			);

@@ -6,8 +6,6 @@ const StarCard = ({ data, height, mass }) => {
 	const starHeight = height;
 	const starMass = mass;
 
-	console.log(starHeight);
-
 	return (
 		<Row>
 			<Col
