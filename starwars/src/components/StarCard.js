@@ -1,4 +1,5 @@
 import React from 'react';
+import { Alert } from 'reactstrap';
 
 const StarCard = ({ data, height, mass }) => {
 	const person = data;
@@ -9,7 +10,9 @@ const StarCard = ({ data, height, mass }) => {
 
 	return (
 		<div className="character">
-			Name: {person} Height: {starHeight} m, Mass: {starMass}
+			<Alert color="primary">Name: {person} </Alert>
+			<Alert color="secondary">Height: {starHeight} m</Alert>
+			<Alert color="info">Mass: {starMass} m</Alert>
 		</div>
 	);
 };
