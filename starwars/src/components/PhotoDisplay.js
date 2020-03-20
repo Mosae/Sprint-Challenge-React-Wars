@@ -21,7 +21,7 @@ export default function PhotoDisplay() {
 	} else {
 		return data.map(data => {
 			console.log(data);
-			return <StarCard data={data.name} />;
+			return <StarCard data={data.name} height={data.height} />;
 		});
 	}
 }

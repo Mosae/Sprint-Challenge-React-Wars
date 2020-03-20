@@ -1,9 +1,15 @@
 import React from 'react';
 
-const StarCard = ({ data }) => {
+const StarCard = ({ data, height }) => {
 	const person = data;
-	console.log(person);
+	const starHeight = height;
 
-	return <div className="character">Name: {person}</div>;
+	console.log(starHeight);
+
+	return (
+		<div className="character">
+			Name: {person} Height: {starHeight} m
+		</div>
+	);
 };
 export default StarCard;
